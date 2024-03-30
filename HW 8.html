@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Learnning JS</title>
+    </head>
+    <body>
+<script type="text/javascript">
+    if (confirm("Are u sure?")){
+        var age = prompt("Enter age");
+		age = Number(age);
+		
+		function formattedAge(age){
+			let lastDigit = age % 10;
+			let secondLastDigit = Math.floor(age / 10) % 10;
+			let result;
+
+			if(typeof age !== 'number' || age < 0){
+				return result = "Invalid value";
+			}
+			if (age === 0 || secondLastDigit === 1 || lastDigit >= 5 || lastDigit === 0){
+				return result = age + " років";
+			} else if (lastDigit >= 2 && lastDigit <= 4){
+				return result = age + " роки";
+			} else return result=  age + " рік";
+		}
+		alert(formattedAge(age));
+	}
+</script>
+</body>
+</html>
