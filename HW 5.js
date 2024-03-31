@@ -8,4 +8,15 @@ function drawTriangle(height, symbol){
     }
 }
 
-drawTriangle(10, '*');
+drawTriangle(5, '*');
+
+
+function drawTriangle2(height, symbol){
+    let row = "";
+    for(let i = 1; i <= height; i++){       
+        row += symbol;
+        console.log(row);
+    }
+}
+
+drawTriangle2(10, '*');
